@@ -1,0 +1,122 @@
+{
+  "info": {
+    "_postman_id": "f37f544e-279e-4d02-82b2-d2fc688a580e",
+    "name": "aplicacion-distribuida",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47604861",
+    "_collection_link": "https://go.postman.co/collection/47604861-f37f544e-279e-4d02-82b2-d2fc688a580e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "crear cliente",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombres\": \"Pablo Cueva\",\r\n  \"cedula\": \"1712345678\",\r\n  \"correo\": \"juan.perez@email.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5014/api/clientes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5014",
+          "path": [
+            "api",
+            "clientes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "consultar clientes",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombres\": \"Pablo Cueva\",\r\n  \"cedula\": \"1712345678\",\r\n  \"correo\": \"juan.perez@email.com\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5014/api/clientes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5014",
+          "path": [
+            "api",
+            "clientes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar cliente",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"idCliente\": 99, \r\n  \"nombres\": \"Juan Modificado\",\r\n  \"cedula\": \"1712345678\",\r\n  \"correo\": \"juan.modificado@email.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5014/api/clientes/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5014",
+          "path": [
+            "api",
+            "clientes",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "eliminar cliente",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"idCliente\": 99, \r\n  \"nombres\": \"Juan Modificado\",\r\n  \"cedula\": \"1712345678\",\r\n  \"correo\": \"juan.modificado@email.com\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5014/api/clientes/99",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5014",
+          "path": [
+            "api",
+            "clientes",
+            "99"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

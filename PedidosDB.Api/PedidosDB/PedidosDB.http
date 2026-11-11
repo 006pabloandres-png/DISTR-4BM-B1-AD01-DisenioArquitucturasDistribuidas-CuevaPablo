@@ -1,0 +1,6 @@
+@PedidosDB_HostAddress = http://localhost:5014
+
+GET {{PedidosDB_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
